@@ -1,0 +1,87 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Bangers|Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900|Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Suez+One');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500|Suez+One');
+
+//variables
+$dancing: 'Dancing Script', cursive;
+$mont: 'Montserrat', sans-serif;
+$robo: 'Roboto Slab',serif;
+$suez: 'Suez One', serif;
+$rubik: 'Rubik', sans-serif;
+
+body {
+    min-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.splash {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/main_background.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .splash--title {
+        color: white;
+        background: rgba($color: rgb(33, 161, 123), $alpha: 0.6);
+        text-align: center;
+        padding: 100px 50px;
+
+        h1 {
+            margin: auto;
+            padding: 0;
+            font-size: 80px;
+            font-family: $rubik;
+            font-weight: 500;
+            padding: 0 200px 0 0;
+        }
+
+        h2 {
+            margin: auto;
+            padding: 0 20px 0 200px;
+            font-size: 40px;
+            font-family: $dancing;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .splash--title {
+            
+            h1,
+            h2 {
+                padding: 0;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        span {
+            display: none;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .splash--title {
+
+            h1 {
+                white-space: nowrap;
+                font-size: 55px;
+            }
+
+            h2 {
+                padding-top: 25px;
+                font-size: 35px
+            }
+
+
+        }
+    }
+}
